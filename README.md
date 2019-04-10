@@ -8,9 +8,8 @@ We attempt to interpret CNNs for monocular depth estimation. To this end, we pro
 
 To be specific, we propose to solve the following optimization function.
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-$$ \min\limits_G \; l_{\rm dif} (Y,N(I \otimes G(I)))+\lambda \frac{1}{n}
-    \lVert G(I) \rVert_1,$$
+<img src="http://www.forkosh.com/mathtex.cgi? \Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}">
+
 
 
 
