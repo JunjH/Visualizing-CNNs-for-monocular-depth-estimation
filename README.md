@@ -2,7 +2,7 @@
 <br>
 Junjie Hu, Yan Zhang, Takayuki Okatani http://arxiv.org/abs/1904.03380
 
--
+<br>
 ![](https://github.com/junjH/Visualizing-CNNs-for-monocular-depth-estimation/raw/master/figs/fig_arch.png)
 
 
