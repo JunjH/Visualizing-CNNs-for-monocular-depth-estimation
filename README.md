@@ -6,6 +6,14 @@ Introduction
 -
 We attempt to interpret CNNs for monocular depth estimation. To this end, we propose to locate the most relevant pixels of input image to depth inference. We formulate it as an optimization problem of identifying the smallest number of image pixels from which the CNN can estimate a depth map with the minimum difference from the estimate from the entire image. 
 
+To be specific, we propose to solve the following optimization function.
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+$$ \min\limits_G \; l_{\rm dif} (Y,N(I \otimes G(I)))+\lambda \frac{1}{n}
+    \lVert G(I) \rVert_1,$$
+
+
+
 ![](https://github.com/junjH/Visualizing-CNNs-for-monocular-depth-estimation/raw/master/figs/fig_arch.png)
 
 Predicted Masks
