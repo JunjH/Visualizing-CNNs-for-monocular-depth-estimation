@@ -26,7 +26,7 @@ Please check our paper for more details.
 Dependencies
 -
 + python 2.7<br>
-+ Pytorch 3.1<br>
++ pytorch 3.1<br>
 
 Running
 -
