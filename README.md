@@ -4,20 +4,20 @@ Junjie Hu, Yan Zhang, Takayuki Okatani http://arxiv.org/abs/1904.03380
 
 We attempt to interpret CNNs for monocular depth estimation. To this end, we propose to locate the most relevant pixels of input image to depth inference. We formulate it as an optimization problem of identifying the smallest number of image pixels from which the CNN can estimate a depth map with the minimum difference from the estimate from the entire image. 
 
-##Model
+Model
 -
-![](https://github.com/junjH/Visualizing-CNNs-for-monocular-depth-estimation/raw/master/figures/fig_arch.png)
+![](https://github.com/junjH/Visualizing-CNNs-for-monocular-depth-estimation/raw/master/figs/fig_arch.pdf)
 
-##Results
+Results
 -
-![](https://github.com/junjH/Visualizing-CNNs-for-monocular-depth-estimation/raw/master/figures/fig_mask.png)
+![](https://github.com/junjH/Visualizing-CNNs-for-monocular-depth-estimation/raw/master/figs/fig_mask.png)
 
-##Dependencies
+Dependencies
 -
 + python 2.7<br>
 + Pytorch 3.1<br>
 
-##Running
+Running
 -
 
 Download the trained networks for depth estimation :
