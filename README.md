@@ -1,15 +1,12 @@
 # Visualization of Convolutional Neural Networks for Monocular Depth Estimation
 <br>
-Junjie Hu, Yan Zhang, Takayuki Okatani http://arxiv.org/abs/1904.03380
-
-
-![](https://github.com/junjH/Visualizing-CNNs-for-monocular-depth-estimation/raw/master/figs/fig_arch.png)
-
+Junjie Hu, Yan Zhang, Takayuki Okatani http://arxiv.org/abs/1904.03380  
 
 Introduction
 -
 We attempt to interpret CNNs for monocular depth estimation. To this end, we propose to locate the most relevant pixels of input image to depth inference. We formulate it as an optimization problem of identifying the smallest number of image pixels from which the CNN can estimate a depth map with the minimum difference from the estimate from the entire image. 
 
+![](https://github.com/junjH/Visualizing-CNNs-for-monocular-depth-estimation/raw/master/figs/fig_arch.png)
 
 Results
 -
