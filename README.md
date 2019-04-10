@@ -21,7 +21,7 @@ Extensive experimental results show
 + The importance of image regions around the vanishing points for depth estimation on outdoor scenes.
 
 
-Please check our paper for more results.
+Please check our paper for more details.
 
 Dependencies
 -
