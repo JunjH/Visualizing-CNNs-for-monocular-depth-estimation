@@ -45,4 +45,15 @@ https://drive.google.com/file/d/1WoOZOBpOWfmwe7bknWS5PMUCLBPFKTOw/view?usp=shari
 + ### Training<br>
   python train.py<br>
 
+Citation
+-
+If you use the code or the pre-processed data, please cite:
+
+>@inproceedings{Hu2019VisualizationOC,<br>
+  title={Visualization of Convolutional Neural Networks for Monocular Depth Estimation},<br>
+  author={Junjie Hu and Yan Zhang and Takayuki Okatani},<br>
+  journal={CoRR},<br>
+  year={2019},<br>
+  volume={abs/1904.03380},<br>
+}<br>
 
