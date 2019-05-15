@@ -49,11 +49,10 @@ Citation
 -
 If you use the code or the pre-processed data, please cite:
 
->@inproceedings{Hu2019VisualizationOC,<br>
-  title={Visualization of Convolutional Neural Networks for Monocular Depth Estimation},<br>
-  author={Junjie Hu and Yan Zhang and Takayuki Okatani},<br>
-  journal={CoRR},<br>
-  year={2019},<br>
-  volume={abs/1904.03380},<br>
-}<br>
+    @article{hu2019visualization,
+      title={Visualization of Convolutional Neural Networks for Monocular Depth Estimation},
+      author={Hu, Junjie and Zhang, Yan and Okatani, Takayuki},
+      journal={arXiv preprint arXiv:1904.03380},
+      year={2019}
+    }
 
