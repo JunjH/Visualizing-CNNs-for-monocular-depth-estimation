@@ -31,14 +31,11 @@ Dependencies
 Running
 -
 
-Download the trained networks for depth estimation :
-https://drive.google.com/file/d/1QaUkdOiGpMuzMeWCGbey0sT0wXY0xtsj/view?usp=sharing<br>
+Download the trained networks for depth estimation : [Depth estimation networks](https://drive.google.com/file/d/1QaUkdOiGpMuzMeWCGbey0sT0wXY0xtsj/view?usp=sharing) <br>
 
-Download the trained networks for mask prediction :
-https://drive.google.com/file/d/12VXcfSEZ_Te13w4WYJyoaJjkhUxOEqwo/view?usp=sharing<br>
+Download the trained networks for mask prediction : [Mask prediction network](https://drive.google.com/file/d/12VXcfSEZ_Te13w4WYJyoaJjkhUxOEqwo/view?usp=sharing) <br>
 
-Download the NYU-v2 dataset:
-https://drive.google.com/file/d/1WoOZOBpOWfmwe7bknWS5PMUCLBPFKTOw/view?usp=sharing<br>
+Download the NYU-v2 dataset: [NYU-v2 dataset](https://drive.google.com/file/d/1WoOZOBpOWfmwe7bknWS5PMUCLBPFKTOw/view?usp=sharing) <br>
 
 + ### Test<br>
   python test.py<br>
