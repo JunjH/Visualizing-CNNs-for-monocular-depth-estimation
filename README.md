@@ -1,6 +1,6 @@
 # Visualization of Convolutional Neural Networks for Monocular Depth Estimation
 <br>
-Junjie Hu, Yan Zhang, Takayuki Okatani: [Paper](http://arxiv.org/abs/1904.03380)  
+Junjie Hu, Yan Zhang, Takayuki Okatani http://arxiv.org/abs/1904.03380
 
 Introduction
 -
