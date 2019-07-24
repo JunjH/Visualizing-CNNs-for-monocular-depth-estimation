@@ -52,3 +52,10 @@ If you use the code or the pre-processed data, please cite:
       booktitle={IEEE International Conf. on Computer Vision (ICCV)},
       year={2019}
     }
+    
+    @inproceedings{Hu2018RevisitingSI,
+      title={Revisiting Single Image Depth Estimation: Toward Higher Resolution Maps With Accurate Object Boundaries},
+      author={Junjie Hu and Mete Ozay and Yan Zhang and Takayuki Okatani},
+      booktitle={IEEE Winter Conf. on Applications of Computer Vision (WACV)},
+      year={2019}
+    }
