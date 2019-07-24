@@ -48,7 +48,7 @@ If you use the code or the pre-processed data, please cite:
 
     @inproceedings{hu2019visualization,
       title={Visualization of Convolutional Neural Networks for Monocular Depth Estimation},
-      author={Hu, Junjie and Zhang, Yan and Okatani, Takayuki},
+      author={Junjie Hu and Yan Zhang and Takayuki Okatani},
       booktitle={IEEE International Conf. on Computer Vision (ICCV)},
       year={2019}
     }
