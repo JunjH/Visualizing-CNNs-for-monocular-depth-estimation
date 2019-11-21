@@ -4,7 +4,6 @@ import torch
 import torch.nn.functional as F
 import torch.nn as nn
 from torch.utils import model_zoo
-import pdb
 import copy
 import numpy as np
 import senet
@@ -151,46 +150,6 @@ class D(nn.Module):
 
         return x_d4
 
-class D2(nn.Module):
-
-    def __init__(self, num_features = 2048):
-        super(D2, self).__init__()
-        self.conv = nn.Conv2d(num_features, num_features //
-                               2, kernel_size=1, stride=1, bias=False)
-        num_features = num_features // 2
-        self.bn = nn.BatchNorm2d(num_features)
-
-        self.up1 = _UpProjection(
-            num_input_features=num_features, num_output_features=num_features // 2)
-        num_features = num_features // 2
-
-        self.up2 = _UpProjection(
-            num_input_features=num_features, num_output_features=num_features // 2)
-        num_features = num_features // 2
-
-        self.up3 = _UpProjection(
-            num_input_features=num_features, num_output_features=num_features // 2)
-        num_features = num_features // 2
-
-        self.up4 = _UpProjection(
-            num_input_features=num_features, num_output_features=num_features // 2)
-        num_features = num_features // 2
-
-        self.conv2 = nn.Conv2d(
-            num_features, 1, kernel_size=3, stride=1, padding=1, bias=True)
-
-
-    def forward(self, x_block1, x_block2, x_block3, x_block4):
-        x_d0 = F.relu(self.bn(self.conv(x_block4)))
-        x_d1 = self.up1(x_d0, [x_block3.size(2), x_block3.size(3)])
-        x_d2 = self.up2(x_d1, [x_block2.size(2), x_block2.size(3)])
-        x_d3 = self.up3(x_d2, [x_block1.size(2), x_block1.size(3)])
-        x_d4 = self.up4(x_d3, [x_block1.size(2)*2, x_block1.size(3)*2])
-
-        out = self.conv2(x_d4)
-
-        return out
-
 class MFF(nn.Module):
 
     def __init__(self, block_channel, num_features=64):
@@ -255,75 +214,3 @@ class R(nn.Module):
         x2 = self.conv2(x1)
 
         return x2
-
-class R2(nn.Module):
-    def __init__(self):
-        super(R2, self).__init__()
-        
-        num_features = 64 
-        self.conv0 = nn.Conv2d(num_features, num_features,
-                               kernel_size=5, stride=1, padding=2, bias=False)
-        self.bn0 = nn.BatchNorm2d(num_features)
-
-        self.conv1 = nn.Conv2d(num_features, num_features,
-                               kernel_size=5, stride=1, padding=2, bias=False)
-        self.bn1 = nn.BatchNorm2d(num_features)
-
-        self.conv2 = nn.Conv2d(
-            num_features, 1, kernel_size=5, stride=1, padding=2, bias=True)
-
-    def forward(self, x):
-        x0 = self.conv0(x)
-        x0 = self.bn0(x0)
-        x0 = F.relu(x0)
-
-        x1 = self.conv1(x0)
-        x1 = self.bn1(x1)
-        x1 = F.relu(x1)
-
-        x2 = self.conv2(x1)
-
-        return x2
-
-
-class MFF2(nn.Module):
-
-    def __init__(self, block_channel, num_features=64):
-
-        super(MFF2, self).__init__()
-
-        self.fea1 = self.attention(block_channel[0],16)
-        self.fea2 = self.attention(block_channel[1],16)
-        self.fea3 = self.attention(block_channel[2],16)
-        self.fea4 = self.attention(block_channel[3],16)
-        
-        self.up1 = _UpProjection(num_input_features=16, num_output_features=16)
-        self.up2 = _UpProjection(num_input_features=16, num_output_features=16)
-        self.up3 = _UpProjection(num_input_features=16, num_output_features=16)
-        self.up4 = _UpProjection(num_input_features=16, num_output_features=16)
-        
-        self.conv = nn.Conv2d(num_features, 1, kernel_size=1, stride=1, bias=False)
-
-        
-    def attention(self, features1, features2):
-        prior = nn.AdaptiveAvgPool2d(output_size=(1, 1))
-        conv1 = nn.Conv2d(features1, features2, kernel_size=1, bias=False)
-        relu = nn.ReLU()
-        conv2 = nn.Conv2d(features2, features2, kernel_size=1, bias=False)
-        sigmoid =  nn.Sigmoid()
-        return nn.Sequential(prior, conv1, relu, conv2, sigmoid)
-
-    def forward(self, x_block1, x_block2, x_block3, x_block4, size):
-        x_f1 = self.fea1(x_block1)
-        x_f2 = self.fea1(x_block2)
-        x_f3 = self.fea1(x_block3)
-        x_f4 = self.fea1(x_block4)
-
-        x_m1 = self.up1(x_f1, size)
-        x_m2 = self.up2(x_f2, size)
-        x_m3 = self.up3(x_f3, size)
-        x_m4 = self.up4(x_f4, size)
-
-        x = self.conv(torch.cat((x_m1, x_m2, x_m3, x_m4), 1))
-
-        return x
