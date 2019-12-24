@@ -86,7 +86,7 @@ def test(train_loader, model, model2, dir):
         image = torch.autograd.Variable(image, volatile=True).cuda()
         depth_ = torch.autograd.Variable(depth_, volatile=True).cuda(async=True)
  
-        depth = model(image.clone())
+        depth = model(image)
 
         mask = model2(image)
         output = model(image*mask)
