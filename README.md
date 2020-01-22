@@ -41,7 +41,7 @@ Download the NYU-v2 dataset: [NYU-v2 dataset](https://drive.google.com/file/d/1W
 
 + ### Test<br>
   python test.py<br>
-+ ### Training<br>
++ ### Train<br>
   python train.py<br>
 
 Citation
