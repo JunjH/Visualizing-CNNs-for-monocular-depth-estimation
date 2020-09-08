@@ -60,4 +60,4 @@ If you use the code or the pre-processed data, please cite:
       author={Junjie Hu and Mete Ozay and Yan Zhang and Takayuki Okatani},
       journal={2019 IEEE Winter Conference on Applications of Computer Vision (WACV)},
       year={2019}
-      }
+    }
