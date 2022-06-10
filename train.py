@@ -76,7 +76,7 @@ def main():
     for epoch in range(args.start_epoch, args.epochs):
         train(train_loader, model, model2, optimizer, epoch)
 
-    torch.save(model.state_dict(), './net_mask/mask_'+model_selection)        
+    torch.save(model2.state_dict(), './net_mask/mask_'+model_selection)        
 
 
 
